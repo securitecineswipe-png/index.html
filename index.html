@@ -21,8 +21,9 @@
         .codes-section.show { opacity: 1; transform: translateY(0); }
         .code-card { background: rgba(255,255,255,0.2); padding: 30px; border-radius: 20px; margin: 25px 0; backdrop-filter: blur(15px); }
         .code { font-size: 2.2em; font-family: monospace; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 15px; display: inline-block; margin: 15px 0; }
-        .btn { background: #ff6b6b; color: white; border: none; padding: 18px 35px; border-radius: 35px; font-size: 1.2em; cursor: pointer; margin: 10px; transition: transform 0.3s; }
+        .btn { background: #ff6b6b; color: white; border: none; padding: 18px 35px; border-radius: 35px; font-size: 1.2em; cursor: pointer; margin: 10px; transition: transform 0.3s; text-decoration: none; display: inline-block; }
         .btn:hover { transform: scale(1.05); }
+        .link-only { background: #4CAF50 !important; }
         @media (max-width: 768px) { .header h1 { font-size: 2.2em; } .article { padding: 25px; } }
     </style>
 </head>
@@ -48,13 +49,13 @@
             </div>
 
             <h2>🏦 Revolut : 25 000€ investis, +3 500€ bourse</h2>
-            <p>Compte gratuit, trading 2 500+ actions (Apple, Tesla), jusqu'à 4.5% sur épargne. <strong>Parfait pour débuter</strong> : 65M utilisateurs, carte sans frais étranger.[page:2]</p>
+            <p>Compte gratuit, trading 2 500+ actions (Apple, Tesla), jusqu'à 4.5% sur épargne. <strong>Parfait pour débuter</strong> : 65M utilisateurs, carte sans frais étranger.</p>
 
             <h2>🏠 Bricks : 50 000€ investis, +3 000€ gains</h2>
-            <p>Crowdfunding immo dès 10€. Obligations mensuelles 8-12% rendement. <strong>Agréé AMF FP-2023-08</strong>, flat tax 30% auto-déclarée. Intérêts reversés TOUS les mois.[page:3]</p>
+            <p>Crowdfunding immo dès 10€. Obligations mensuelles 8-12% rendement. <strong>Agréé AMF FP-2023-08</strong>, flat tax 30% auto-déclarée. Intérêts reversés TOUS les mois.</p>
 
             <h2>🏗️ La 1ère Brique : 11 000€ investis, +1 100€ 2025</h2>
-            <p>Investir dès 1€ dans immo (750+ projets). <strong>12% brut/an, 19 mois moyen, 300M€ investis</strong>. JIM bots auto-investissent, 5% sur solde non investi, AMF FP-2023-15.[page:1]</p>
+            <p>Investir dès 1€ dans immo (750+ projets). <strong>12% brut/an, 19 mois moyen, 300M€ investis</strong>. JIM bots auto-investissent, 5% sur solde non investi, AMF FP-2023-15.</p>
 
             <div style="text-align: center; margin: 50px 0;">
                 <button class="btn" onclick="revealCodes()" style="font-size: 1.6em; padding: 25px 50px;">🔓 Mes codes exclusifs (GRATUIT)</button>
@@ -62,30 +63,28 @@
         </div>
 
         <div class="codes-section" id="codes">
-            <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5em;">✅ Tes codes pour commencer</h2>
+            <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5em;">✅ Tes liens/codes exclusifs</h2>
             
             <div class="code-card">
                 <h3 style="margin-bottom: 15px;">🏦 <strong>Revolut</strong></h3>
-                <div class="code">TONCODE123</div>
-                <p><strong>80€ offerts</strong> après 3 achats + trading gratuit. Inscris-toi !</p>
-                <button class="btn" onclick="copyCode('TONCODE123')">📋 Copier code</button>
-                <button class="btn"><a href="https://revolut.com" style="color:white;text-decoration:none;">🚀 S'inscrire</a></button>
+                <p><strong>80€ offerts</strong> après 3 achats + trading gratuit</p>
+                <a href="https://revolut.com/referral/?referral-code=willia05sk!DEC2-25-AR-H1&geo-redirect" class="btn link-only" target="_blank">🚀 S'inscrire (mon lien)</a>
             </div>
 
             <div class="code-card">
                 <h3 style="margin-bottom: 15px;">🏠 <strong>Bricks</strong></h3>
-                <div class="code">QUEARI76</div>
+                <div class="code">WILPAR22</div>
                 <p><strong>2% cashback</strong> sur tes 1ers investissements (12 mois)</p>
-                <button class="btn" onclick="copyCode('QUEARI76')">📋 Copier code</button>
-                <button class="btn"><a href="https://app.bricks.co" style="color:white;text-decoration:none;">🚀 S'inscrire</a></button>
+                <button class="btn" onclick="copyCode('WILPAR22')">📋 Copier code</button>
+                <a href="https://app.bricks.co/sign-up/WILPAR22" class="btn" target="_blank">🚀 S'inscrire</a>
             </div>
 
             <div class="code-card">
                 <h3 style="margin-bottom: 15px;">🏗️ <strong>La 1ère Brique</strong></h3>
-                <div class="code">UT9ZIE</div>
+                <div class="code">Z3SAK8</div>
                 <p><strong>3% bonus 1er projet</strong> + 12% rendement/an</p>
-                <button class="btn" onclick="copyCode('UT9ZIE')">📋 Copier code</button>
-                <button class="btn"><a href="https://lapremierebrique.fr" style="color:white;text-decoration:none;">🚀 S'inscrire</a></button>
+                <button class="btn" onclick="copyCode('Z3SAK8')">📋 Copier code</button>
+                <a href="https://lapremierebrique.fr/fr/users/sign_up/Z3SAK8" class="btn" target="_blank">🚀 S'inscrire</a>
             </div>
         </div>
     </div>
@@ -115,7 +114,7 @@
 
         function revealCodes() {
             document.getElementById('codes').classList.add('show');
-            document.querySelector('.btn').style.display = 'none';
+            document.querySelector('.btn[onclick="revealCodes()"]').style.display = 'none';
         }
 
         function copyCode(code) {
