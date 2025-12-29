@@ -14,21 +14,24 @@
         .subtitle { font-size: 1.4em; color: #666; font-style: italic; }
         .byline { color: #888; font-size: 1.1em; margin-top: 20px; }
         .article { background: white; padding: 60px 40px; margin: 40px 0; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
-        .section-title { font-size: 2.2em; color: #1a1a1a; margin: 50px 0 30px; border-bottom: 4px solid #3498db; padding-bottom: 20px; }
-        .chart-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin: 40px 0; }
-        .chart-container { background: #f8fcff; padding: 30px; border-radius: 12px; border-left: 5px solid #3498db; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .logo { width: 80px; height: 80px; border-radius: 15px; margin: 0 15px 10px 0; vertical-align: middle; }
-        .app-section { display: flex; align-items: center; margin: 40px 0; padding: 30px; background: #f0f8ff; border-radius: 12px; border-left: 5px solid #3498db; }
-        .pullquote { background: linear-gradient(90deg, #3498db, #2980b9); color: white; padding: 40px; border-radius: 12px; font-size: 1.6em; text-align: center; margin: 50px 0; }
-        .codes-section { background: #ecf0f1; padding: 60px 40px; border-radius: 12px; margin-top: 80px; opacity: 0; transform: translateY(50px); transition: all 1s; }
+        .section-title { font-size: 2.2em; color: #1a1a1a; margin: 50px 0 30px; border-bottom: 4px solid #D4AF37; padding-bottom: 20px; }
+        .chart-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin: 30px 0; }
+        .chart-container { background: #1a1a1a; padding: 25px; border-radius: 12px; border-left: 5px solid #D4AF37; box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .chart-title { text-align: center; color: #FAD02C; font-size: 1.1em; font-weight: 600; margin-bottom: 15px; }
+        .chart-desc { text-align: center; color: #ddd; font-size: 0.9em; margin-top: 10px; font-style: italic; }
+        .app-icon { width: 70px; height: 70px; border-radius: 12px; margin: 0 15px 10px 0; display: flex; align-items: center; justify-content: center; font-size: 0.75em; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .revolut-icon { background: white; color: #1a1a1a; }
+        .bricks-icon { background: #ff6b35; color: white; }
+        .brique-icon { background: #e74c3c; color: white; }
+        .app-section { display: flex; align-items: center; margin: 35px 0; padding: 25px; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 12px; border-left: 5px solid #D4AF37; }
+        .pullquote { background: linear-gradient(90deg, #D4AF37, #B87333); color: white; padding: 35px; border-radius: 12px; font-size: 1.5em; text-align: center; margin: 45px 0; }
+        .codes-section { background: #1a1a1a; padding: 60px 40px; border-radius: 12px; margin-top: 80px; opacity: 0; transform: translateY(50px); transition: all 1s; color: white; }
         .codes-section.show { opacity: 1; transform: translateY(0); }
-        .code-card { background: white; padding: 40px; border-radius: 12px; margin: 35px 0; box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-left: 6px solid #27ae60; }
-        .code { font-size: 2.5em; font-family: 'Courier New', monospace; background: linear-gradient(135deg, #e8f5e8, #d4edda); padding: 25px; border-radius: 10px; display: block; margin: 20px 0; text-align: center; }
-        .cta-btn { background: #e74c3c; color: white; border: none; padding: 20px 40px; border-radius: 8px; font-size: 1.3em; cursor: pointer; margin: 15px 10px; transition: all 0.3s; display: inline-block; text-decoration: none; font-weight: 600; }
-        .cta-btn:hover { background: #c0392b; transform: translateY(-2px); }
-        .link-only { background: #27ae60 !important; }
-        .link-only:hover { background: #229954 !important; }
-        @media (max-width: 768px) { .chart-row { grid-template-columns: 1fr; } .main-title { font-size: 2.2em; } .app-section { flex-direction: column; text-align: center; } }
+        .code-card { background: rgba(255,255,255,0.1); padding: 35px; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-left: 5px solid #FAD02C; }
+        .code { font-size: 2.2em; font-family: 'Courier New', monospace; background: linear-gradient(135deg, #D4AF37, #FAD02C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding: 20px; border-radius: 10px; display: block; margin: 20px 0; text-align: center; }
+        .cta-btn { background: linear-gradient(135deg, #D4AF37, #B87333); color: #1a1a1a; border: none; padding: 18px 35px; border-radius: 8px; font-size: 1.2em; cursor: pointer; margin: 12px 8px; transition: all 0.3s; display: inline-block; text-decoration: none; font-weight: 700; box-shadow: 0 5px 15px rgba(212,175,55,0.4); }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.6); }
+        @media (max-width: 768px) { .chart-row { grid-template-columns: 1fr; } .main-title { font-size: 2.2em; } .app-section { flex-direction: column; text-align: center; } .app-icon { margin: 0 0 15px 0; } }
     </style>
 </head>
 <body>
@@ -51,29 +54,34 @@
             
             <div class="chart-row">
                 <div class="chart-container">
-                    <h3 style="text-align: center; margin-bottom: 20px;">Évolution patrimoine total</h3>
-                    <canvas id="patrimoineChart"></canvas>
+                    <div class="chart-title">Évolution patrimoine total</div>
+                    <canvas id="patrimoineChart" height="250"></canvas>
+                    <div class="chart-desc">De 35k€ à 120k€ en 24 mois (+243%)</div>
                 </div>
                 <div class="chart-container">
-                    <h3 style="text-align: center; margin-bottom: 20px;">Gains mensuels réels</h3>
-                    <canvas id="gainsMensuelsChart"></canvas>
+                    <div class="chart-title">Gains mensuels réels</div>
+                    <canvas id="gainsMensuelsChart" height="250"></canvas>
+                    <div class="chart-desc">Moyenne : 480€/mois (x12 = 5 760€/an)</div>
                 </div>
             </div>
 
             <div class="chart-row">
                 <div class="chart-container">
-                    <h3 style="text-align: center; margin-bottom: 20px;">Rendements vs Livret A</h3>
-                    <canvas id="rendementsChart"></canvas>
+                    <div class="chart-title">Rendements vs Livret A</div>
+                    <canvas id="rendementsChart" height="250"></canvas>
+                    <div class="chart-desc">x7 à x8 plus rentable que l'épargne classique</div>
                 </div>
                 <div class="chart-container">
-                    <h3 style="text-align: center; margin-bottom: 20px;">ROI par application</h3>
-                    <canvas id="roiChart"></canvas>
+                    <div class="chart-title">Répartition gains par app</div>
+                    <canvas id="roiChart" height="250"></canvas>
+                    <div class="chart-desc">Revolut domine (41%) suivi de Bricks (35%)</div>
                 </div>
             </div>
 
-            <div class="chart-container" style="grid-column: 1/-1;">
-                <h3 style="text-align: center; margin-bottom: 20px;">Projection 2026 : +35k€ attendus</h3>
-                <canvas id="projectionChart"></canvas>
+            <div class="chart-container">
+                <div class="chart-title">Projection 2026</div>
+                <canvas id="projectionChart" height="250"></canvas>
+                <div class="chart-desc">+35k€ attendus = 155k€ fin 2026 (+29% cette année)</div>
             </div>
 
             <div class="section-title">💡 Ma découverte : 3 applications simples</div>
@@ -82,97 +90,111 @@
             <div class="section-title">🏦 Mes 3 applications en détail</div>
 
             <div class="app-section">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Revolut_logo.svg" alt="Revolut" class="logo">
+                <div class="app-icon revolut-icon">REVOLUT</div>
                 <div>
                     <h3>Revolut : 25 000€ investis, +3 500€ bourse</h3>
-                    <p>Trading 2 500+ actions (Apple, Tesla), 4.5% épargne, carte gratuite étranger. <strong>65M utilisateurs, agréé Banque de Lituanie</strong>.</p>
+                    <p>Trading 2 500+ actions (Apple, Tesla), 4.5% épargne, carte gratuite étranger. <strong>65M utilisateurs</strong>.</p>
                 </div>
             </div>
 
             <div class="app-section">
-               <img src="https://www.bricks.co/_next/static/media/logo-bricks.12345678.svg" alt="Bricks" class="logo">
+                <div class="app-icon bricks-icon">BRICKS</div>
                 <div>
                     <h3>Bricks : 50 000€ investis, +3 000€ intérêts</h3>
-                    <p>Crowdfunding immo dès 10€. Obligations 8-12%/an, remboursements mensuels. <strong>Agréé AMF FP-2023-08</strong>, flat tax 30% auto.</p>
+                    <p>Crowdfunding immo dès 10€. Obligations 8-12%/an, mensualités. <strong>Agréé AMF</strong>.</p>
                 </div>
             </div>
 
             <div class="app-section">
-                <img src="https://lapremierebrique.fr/assets/logo-lapremierebrique.svg" alt="La 1ère Brique" class="logo">
+                <div class="app-icon brique-icon">1ÈRE BRIQUE</div>
                 <div>
                     <h3>La 1ère Brique : 11 000€ investis, +1 100€ 2026</h3>
-                    <p>Prêts immo dès 1€ (750+ projets). <strong>12% brut/an, 19 mois moyen, 300M€ investis</strong>. JIM bots auto-invest, 5% cash non investi, AMF FP-2023-15.</p>
+                    <p>Prêts immo dès 1€ (750+ projets). <strong>12% brut/an, 300M€ levés</strong>.</p>
                 </div>
             </div>
 
             <div style="text-align: center; margin: 80px 0;">
-                <button class="cta-btn" onclick="revealCodes()" style="font-size: 1.6em; padding: 28px 70px;">🔓 Accéder à mes codes exclusifs (GRATUIT)</button>
+                <button class="cta-btn" onclick="revealCodes()" style="font-size: 1.5em; padding: 25px 60px;">🔓 Accéder aux codes exclusifs</button>
             </div>
         </article>
 
         <section class="codes-section" id="codes">
-            <h2 style="text-align: center; font-size: 3em; margin-bottom: 50px;">✅ Tes codes et liens vérifiés</h2>
+            <h2 style="text-align: center; font-size: 2.8em; margin-bottom: 50px;">✅ Tes codes et liens vérifiés</h2>
             
             <div class="code-card">
-                <h3 style="color: #2980b9; margin-bottom: 20px;">🏦 Revolut - 80€ après 3 achats</h3>
-                <a href="https://revolut.com/referral/?referral-code=willia05sk!DEC2-25-AR-H1&geo-redirect" class="cta-btn link-only" target="_blank">🚀 S'inscrire via mon lien (80€ garantis)</a>
+                <h3 style="color: #FAD02C; margin-bottom: 20px;">🏦 Revolut - 80€ après 3 achats</h3>
+                <a href="https://revolut.com/referral/?referral-code=willia05sk!DEC2-25-AR-H1&geo-redirect" class="cta-btn" target="_blank">🚀 S'inscrire via mon lien</a>
             </div>
 
             <div class="code-card">
-                <h3 style="color: #e67e22; margin-bottom: 15px;">🏠 Bricks - 2% cashback sur projets</h3>
+                <h3 style="color: #FAD02C; margin-bottom: 15px;">🏠 Bricks - 2% cashback projets</h3>
                 <div class="code">WILPAR22</div>
-                <button class="cta-btn" onclick="copyCode('WILPAR22')">📋 Copier le code</button>
-                <a href="https://app.bricks.co/sign-up/WILPAR22" class="cta-btn" target="_blank">🚀 S'inscrire avec code</a>
+                <button class="cta-btn" onclick="copyCode('WILPAR22')">📋 Copier code</button>
+                <a href="https://app.bricks.co/sign-up/WILPAR22" class="cta-btn" target="_blank">🚀 S'inscrire</a>
             </div>
 
             <div class="code-card">
-                <h3 style="color: #27ae60; margin-bottom: 15px;">🏗️ La 1ère Brique - 3% bonus 1er projet</h3>
+                <h3 style="color: #FAD02C; margin-bottom: 15px;">🏗️ La 1ère Brique - 3% bonus projet</h3>
                 <div class="code">Z3SAK8</div>
-                <button class="cta-btn" onclick="copyCode('Z3SAK8')">📋 Copier le code</button>
-                <a href="https://lapremierebrique.fr/fr/users/sign_up/Z3SAK8" class="cta-btn" target="_blank">🚀 S'inscrire avec code</a>
+                <button class="cta-btn" onclick="copyCode('Z3SAK8')">📋 Copier code</button>
+                <a href="https://lapremierebrique.fr/fr/users/sign_up/Z3SAK8" class="cta-btn" target="_blank">🚀 S'inscrire</a>
             </div>
         </section>
     </div>
 
     <script>
-        // 5 GRAPHES COMPLETS
+        // Palette OR/NOIR (IDENTIQUE)
+        const colors = {
+            goldMat: '#D4AF37', goldBright: '#FAD02C', blackCarbon: '#1a1a1a',
+            copper: '#B87333', gradientGold: 'rgba(212, 175, 55, 0.3)',
+            gradientCopper: 'rgba(184, 115, 51, 0.3)'
+        };
+
+        // 5 GRAPHES COMPACTS (IDENTIQUE)
         new Chart(document.getElementById('patrimoineChart').getContext('2d'), {
             type: 'line', data: {
                 labels: ['Jan24', 'Avr', 'Juil', 'Oct', 'Jan25', 'Déc25'],
-                datasets: [{ label: 'Patrimoine', data: [35000, 55000, 78000, 98000, 108000, 120000],
-                    borderColor: '#3498db', backgroundColor: 'rgba(52,152,219,0.1)', tension: 0.4, fill: true, borderWidth: 4 }]
-            }, options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+                datasets: [{ data: [35000, 55000, 78000, 98000, 108000, 120000],
+                    borderColor: colors.goldBright, backgroundColor: colors.gradientGold,
+                    tension: 0.5, fill: true, borderWidth: 4, pointRadius: 6 }]
+            }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.1)' } },
+                         x: { grid: { display: false } } } }
         });
 
         new Chart(document.getElementById('gainsMensuelsChart').getContext('2d'), {
             type: 'bar', data: {
                 labels: ['Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc'],
-                datasets: [{ label: 'Gains', data: [250, 320, 450, 380, 420, 500, 480, 520, 610, 550, 680, 720],
-                    backgroundColor: '#3498db' }]
-            }, options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+                datasets: [{ data: [250, 320, 450, 380, 420, 500, 480, 520, 610, 550, 680, 720],
+                    backgroundColor: colors.copper, borderRadius: 6 }]
+            }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true }, x: { grid: { display: false } } } }
         });
 
         new Chart(document.getElementById('rendementsChart').getContext('2d'), {
             type: 'bar', data: {
                 labels: ['Livret A', 'Revolut', 'Bricks', '1ère Brique'],
-                datasets: [{ label: 'Rendement %', data: [1.7, 14, 10.5, 12],
-                    backgroundColor: ['#95a5a6', '#3498db', '#e67e22', '#27ae60'] }]
-            }, options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, max: 15 } } }
+                datasets: [{ data: [1.7, 14, 10.5, 12],
+                    backgroundColor: [colors.blackCarbon, colors.goldMat, colors.copper, colors.goldBright], borderRadius: 6 }]
+            }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true, max: 15 } } }
         });
 
         new Chart(document.getElementById('roiChart').getContext('2d'), {
             type: 'doughnut', data: {
                 labels: ['Revolut 3.5k€', 'Bricks 3k€', '1ère Brique 1.1k€'],
-                datasets: [{ data: [3500, 3000, 1100], backgroundColor: ['#3498db', '#e67e22', '#27ae60'] }]
-            }, options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+                datasets: [{ data: [3500, 3000, 1100], backgroundColor: [colors.goldMat, colors.copper, colors.goldBright] }]
+            }, options: { responsive: true, maintainAspectRatio: false, cutout: '60%' }
         });
 
         new Chart(document.getElementById('projectionChart').getContext('2d'), {
             type: 'line', data: {
                 labels: ['Aujourd\'hui', 'Mars26', 'Juin26', 'Sept26', 'Déc26'],
-                datasets: [{ label: 'Prévision', data: [120000, 128000, 137000, 146000, 155000],
-                    borderColor: '#27ae60', backgroundColor: 'rgba(39,174,96,0.1)', tension: 0.4, fill: true, borderWidth: 4 }]
-            }, options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: false } } }
+                datasets: [{ data: [120000, 128000, 137000, 146000, 155000],
+                    borderColor: colors.goldBright, backgroundColor: colors.gradientCopper,
+                    tension: 0.5, fill: true, borderWidth: 4, pointRadius: 6 }]
+            }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: false } } }
         });
 
         function revealCodes() {
