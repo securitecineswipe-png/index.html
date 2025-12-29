@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment investir son argent en 2025 ? 120k€ prouvés</title>
+    <title>Codes parrainage GRATUIT 2025 : Revolut 80€ + Bricks 2%</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -16,9 +16,9 @@
         .article { background: white; padding: 60px 40px; margin: 40px 0; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
         .section-title { font-size: 2.2em; color: #1a1a1a; margin: 50px 0 30px; border-bottom: 4px solid #D4AF37; padding-bottom: 20px; }
         .chart-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin: 30px 0; }
-        .chart-container { background: #1a1a1a; padding: 20px; border-radius: 12px; border-left: 5px solid #D4AF37; box-shadow: 0 8px 25px rgba(0,0,0,0.15); height: 320px; display: flex; flex-direction: column; }
-        .chart-wrapper { flex: 1; position: relative; height: 220px; }
-        .chart-title { text-align: center; color: #FAD02C; font-size: 1em; font-weight: 600; margin-bottom: 8px; }
+        .chart-container { background: #1a1a1a; padding: 20px; border-radius: 12px; border-left: 5px solid #D4AF37; box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .chart-canvas { width: 100% !important; height: 200px !important; }
+        .chart-title { text-align: center; color: #FAD02C; font-size: 1em; font-weight: 600; margin: 8px 0; }
         .chart-desc { text-align: center; color: #ddd; font-size: 0.85em; margin-top: 5px; font-style: italic; }
         .app-icon { width: 70px; height: 70px; border-radius: 12px; margin: 0 15px 10px 0; display: flex; align-items: center; justify-content: center; font-size: 0.75em; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
         .revolut-icon { background: white; color: #1a1a1a; }
@@ -32,7 +32,7 @@
         .code { font-size: 2.2em; font-family: 'Courier New', monospace; background: linear-gradient(135deg, #D4AF37, #FAD02C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding: 20px; border-radius: 10px; display: block; margin: 20px 0; text-align: center; }
         .cta-btn { background: linear-gradient(135deg, #D4AF37, #B87333); color: #1a1a1a; border: none; padding: 18px 35px; border-radius: 8px; font-size: 1.2em; cursor: pointer; margin: 12px 8px; transition: all 0.3s; display: inline-block; text-decoration: none; font-weight: 700; box-shadow: 0 5px 15px rgba(212,175,55,0.4); }
         .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.6); }
-        @media (max-width: 768px) { .chart-row { grid-template-columns: 1fr; } .main-title { font-size: 2.2em; } .app-section { flex-direction: column; text-align: center; } .app-icon { margin: 0 0 15px 0; } .chart-container { height: 300px; } }
+        @media (max-width: 768px) { .chart-row { grid-template-columns: 1fr; } .main-title { font-size: 2.2em; } .app-section { flex-direction: column; text-align: center; } .app-icon { margin: 0 0 15px 0; } .chart-canvas { height: 180px !important; } }
     </style>
 </head>
 <body>
@@ -56,16 +56,12 @@
             <div class="chart-row">
                 <div class="chart-container">
                     <div class="chart-title">Évolution patrimoine total</div>
-                    <div class="chart-wrapper">
-                        <canvas id="patrimoineChart"></canvas>
-                    </div>
+                    <canvas id="patrimoineChart" class="chart-canvas"></canvas>
                     <div class="chart-desc">De 35k€ à 120k€ en 24 mois (+243%)</div>
                 </div>
                 <div class="chart-container">
                     <div class="chart-title">Gains mensuels réels</div>
-                    <div class="chart-wrapper">
-                        <canvas id="gainsMensuelsChart"></canvas>
-                    </div>
+                    <canvas id="gainsMensuelsChart" class="chart-canvas"></canvas>
                     <div class="chart-desc">Moyenne : 480€/mois (x12 = 5 760€/an)</div>
                 </div>
             </div>
@@ -73,25 +69,19 @@
             <div class="chart-row">
                 <div class="chart-container">
                     <div class="chart-title">Rendements vs Livret A</div>
-                    <div class="chart-wrapper">
-                        <canvas id="rendementsChart"></canvas>
-                    </div>
+                    <canvas id="rendementsChart" class="chart-canvas"></canvas>
                     <div class="chart-desc">x7 à x8 plus rentable que l'épargne classique</div>
                 </div>
                 <div class="chart-container">
                     <div class="chart-title">Répartition gains par app</div>
-                    <div class="chart-wrapper">
-                        <canvas id="roiChart"></canvas>
-                    </div>
+                    <canvas id="roiChart" class="chart-canvas"></canvas>
                     <div class="chart-desc">Revolut domine (41%) suivi de Bricks (35%)</div>
                 </div>
             </div>
 
             <div class="chart-container">
                 <div class="chart-title">Projection 2026</div>
-                <div class="chart-wrapper">
-                    <canvas id="projectionChart"></canvas>
-                </div>
+                <canvas id="projectionChart" class="chart-canvas"></canvas>
                 <div class="chart-desc">+35k€ attendus = 155k€ fin 2026 (+29% cette année)</div>
             </div>
 
@@ -154,22 +144,47 @@
     </div>
 
     <script>
+        // Palette OR/NOIR
         const colors = {
             goldMat: '#D4AF37', goldBright: '#FAD02C', blackCarbon: '#1a1a1a',
             copper: '#B87333', gradientGold: 'rgba(212, 175, 55, 0.3)',
             gradientCopper: 'rgba(184, 115, 51, 0.3)'
         };
 
-        ['patrimoineChart','gainsMensuelsChart','rendementsChart','roiChart','projectionChart'].forEach((id, i) => {
-            const ctx = document.getElementById(id).getContext('2d');
-            const charts = [
-                {type: 'line', data: {labels: ['Jan24','Avr','Juil','Oct','Jan25','Déc25'], datasets: [{data: [35000,55000,78000,98000,108000,120000], borderColor: colors.goldBright, backgroundColor: colors.gradientGold, tension: 0.5, fill: true, borderWidth: 3}]}},
-                {type: 'bar', data: {labels: ['Jan','Fév','Mars','Avr','Mai','Juin','Juil','Août','Sept','Oct','Nov','Déc'], datasets: [{data: [250,320,450,380,420,500,480,520,610,550,680,720], backgroundColor: colors.copper, borderRadius: 4}]}},
-                {type: 'bar', data: {labels: ['Livret A','Revolut','Bricks','1ère Brique'], datasets: [{data: [1.7,14,10.5,12], backgroundColor: [colors.blackCarbon,colors.goldMat,colors.copper,colors.goldBright], borderRadius: 4}]}},
-                {type: 'doughnut', data: {labels: ['Revolut 3.5k€','Bricks 3k€','1ère Brique 1.1k€'], datasets: [{data: [3500,3000,1100], backgroundColor: [colors.goldMat,colors.copper,colors.goldBright]}]}},
-                {type: 'line', data: {labels: ['Aujourd\'hui','Mars26','Juin26','Sept26','Déc26'], datasets: [{data: [120000,128000,137000,146000,155000], borderColor: colors.goldBright, backgroundColor: colors.gradientCopper, tension: 0.5, fill: true, borderWidth: 3}]}}
-            ];
-            new Chart(ctx, {type: charts[i].type, data: charts[i].data, options: {responsive: true, maintainAspectRatio: false, plugins: {legend: {display: false}}, scales: {y: {beginAtZero: i<3 ? true : false, grid: {color: 'rgba(255,255,255,0.1)'}}, x: {grid: {display: false}}}}});
+        // Charts avec HAUTEUR FIXE
+        new Chart(document.getElementById('patrimoineChart'), {
+            type: 'line', data: {
+                labels: ['Jan24','Avr','Juil','Oct','Jan25','Déc25'],
+                datasets: [{data: [35000,55000,78000,98000,108000,120000], borderColor: colors.goldBright, backgroundColor: colors.gradientGold, tension: 0.4, fill: true, borderWidth: 3}]
+            }, options: {responsive: true, maintainAspectRatio: false, plugins: {legend: {display: false}}, scales: {y: {beginAtZero: true, grid: {color: 'rgba(255,255,255,0.1)'}}, x: {grid: {display: false}}}}
+        });
+
+        new Chart(document.getElementById('gainsMensuelsChart'), {
+            type: 'bar', data: {
+                labels: ['Jan','Fév','Mars','Avr','Mai','Juin','Juil','Août','Sept','Oct','Nov','Déc'],
+                datasets: [{data: [250,320,450,380,420,500,480,520,610,550,680,720], backgroundColor: colors.copper, borderRadius: 4}]
+            }, options: {responsive: true, maintainAspectRatio: false, plugins: {legend: {display: false}}, scales: {y: {beginAtZero: true}, x: {grid: {display: false}}}}
+        });
+
+        new Chart(document.getElementById('rendementsChart'), {
+            type: 'bar', data: {
+                labels: ['Livret A','Revolut','Bricks','1ère Brique'],
+                datasets: [{data: [1.7,14,10.5,12], backgroundColor: [colors.blackCarbon,colors.goldMat,colors.copper,colors.goldBright], borderRadius: 4}]
+            }, options: {responsive: true, maintainAspectRatio: false, plugins: {legend: {display: false}}, scales: {y: {beginAtZero: true, max: 15}}}
+        });
+
+        new Chart(document.getElementById('roiChart'), {
+            type: 'doughnut', data: {
+                labels: ['Revolut 3.5k€','Bricks 3k€','1ère Brique 1.1k€'],
+                datasets: [{data: [3500,3000,1100], backgroundColor: [colors.goldMat,colors.copper,colors.goldBright]}]
+            }, options: {responsive: true, maintainAspectRatio: false, cutout: '60%'}
+        });
+
+        new Chart(document.getElementById('projectionChart'), {
+            type: 'line', data: {
+                labels: ['Aujourd\'hui','Mars26','Juin26','Sept26','Déc26'],
+                datasets: [{data: [120000,128000,137000,146000,155000], borderColor: colors.goldBright, backgroundColor: colors.gradientCopper, tension: 0.4, fill: true, borderWidth: 3}]
+            }, options: {responsive: true, maintainAspectRatio: false, plugins: {legend: {display: false}}, scales: {y: {beginAtZero: false}}}
         });
 
         function revealCodes() {
