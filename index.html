@@ -3,93 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💰 J'ai gagné 1 200€ en 6 mois avec ces 3 apps</title>
+    <title>💰 Mon patrimoine : 120 000€ en 2 ans avec ces 3 apps</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #fafafa; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; text-align: center; border-radius: 20px; margin-bottom: 30px; }
-        .header h1 { font-size: 2.5em; font-weight: 800; margin-bottom: 10px; }
-        .header p { font-size: 1.3em; opacity: 0.95; }
-        .article { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .chart-container { background: #f8f9ff; padding: 30px; border-radius: 15px; margin: 30px 0; text-align: center; }
-        .codes-section { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 40px; border-radius: 20px; margin-top: 50px; opacity: 0; transform: translateY(50px); transition: all 1s; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px 20px; text-align: center; border-radius: 25px; margin-bottom: 30px; }
+        .header h1 { font-size: 2.8em; font-weight: 800; margin-bottom: 15px; }
+        .header p { font-size: 1.4em; opacity: 0.95; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .stat { background: rgba(255,255,255,0.3); padding: 20px; border-radius: 15px; text-align: center; }
+        .stat-value { font-size: 2.5em; font-weight: bold; }
+        .article { background: white; padding: 40px; border-radius: 25px; box-shadow: 0 25px 70px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .chart-container { background: #f8f9ff; padding: 30px; border-radius: 20px; margin: 30px 0; text-align: center; }
+        .codes-section { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 40px; border-radius: 25px; margin-top: 50px; opacity: 0; transform: translateY(50px); transition: all 1s; }
         .codes-section.show { opacity: 1; transform: translateY(0); }
-        .code-card { background: rgba(255,255,255,0.2); padding: 25px; border-radius: 15px; margin: 20px 0; backdrop-filter: blur(10px); }
-        .code { font-size: 2em; font-family: monospace; background: rgba(255,255,255,0.3); padding: 15px; border-radius: 10px; display: inline-block; }
-        .btn { background: #ff6b6b; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1em; cursor: pointer; margin: 10px; transition: transform 0.3s; }
+        .code-card { background: rgba(255,255,255,0.2); padding: 30px; border-radius: 20px; margin: 25px 0; backdrop-filter: blur(15px); }
+        .code { font-size: 2.2em; font-family: monospace; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 15px; display: inline-block; margin: 15px 0; }
+        .btn { background: #ff6b6b; color: white; border: none; padding: 18px 35px; border-radius: 35px; font-size: 1.2em; cursor: pointer; margin: 10px; transition: transform 0.3s; }
         .btn:hover { transform: scale(1.05); }
-        @media (max-width: 768px) { .header h1 { font-size: 2em; } .article { padding: 20px; } }
+        @media (max-width: 768px) { .header h1 { font-size: 2.2em; } .article { padding: 25px; } }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>💰 J'ai gagné 1 200€ en 6 mois</h1>
-            <p>Avec ces 3 applications de finance que tout le monde devrait connaître</p>
+            <h1>💰 Mon vrai patrimoine : 120 000€</h1>
+            <p>50k€ Bricks + 11k€ La 1ère Brique + 25k€ Revolut = 8 600€ de gains en 2 ans</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat"><div class="stat-value">120 000€</div><div>Patrimoine total</div></div>
+            <div class="stat"><div class="stat-value">50 000€</div><div>Investi Bricks</div></div>
+            <div class="stat"><div class="stat-value">11 000€</div><div>La 1ère Brique</div></div>
+            <div class="stat"><div class="stat-value">25 000€</div><div>Revolut Trading</div></div>
+            <div class="stat"><div class="stat-value">+8 600€</div><div>Gains totaux</div></div>
         </div>
 
         <div class="article">
-            <h2>📈 Mes gains réels mois par mois</h2>
+            <h2>📈 Évolution de mon patrimoine</h2>
             <div class="chart-container">
-                <canvas id="gainsChart" width="400" height="200"></canvas>
+                <canvas id="patrimoineChart" width="600" height="250"></canvas>
             </div>
-            
-            <h2>🎯 Pourquoi j'ai commencé</h2>
-            <p>J'étais comme toi : salaire moyen, envie d'argent passif. J'ai testé Revolut pour voyager sans frais, puis découvert Bricks et La Première Brique pour l'immobilier. Résultat : <strong>1 200€ de bonus + 8% rendement annuel</strong>.</p>
-            
-            <h2>⚠️ Ce que personne ne te dit</h2>
-            <ul style="margin: 20px 0; padding-left: 25px;">
-                <li>Revolut : 80€ par ami qui fait 3 achats</li>
-                <li>Bricks : 2% cashback sur TOUS tes investissements (12 mois)</li>
-                <li>La 1ère Brique : 3% bonus sur ton 1er projet + intérêts mensuels</li>
-            </ul>
-            
-            <div style="text-align: center; margin: 40px 0;">
-                <button class="btn" onclick="revealCodes()" style="font-size: 1.5em; padding: 20px 40px;">🔓 Débloquer les codes (GRATUIT)</button>
+
+            <h2>🏦 Revolut : 25 000€ investis, +3 500€ bourse</h2>
+            <p>Compte gratuit, trading 2 500+ actions (Apple, Tesla), jusqu'à 4.5% sur épargne. <strong>Parfait pour débuter</strong> : 65M utilisateurs, carte sans frais étranger.[page:2]</p>
+
+            <h2>🏠 Bricks : 50 000€ investis, +3 000€ gains</h2>
+            <p>Crowdfunding immo dès 10€. Obligations mensuelles 8-12% rendement. <strong>Agréé AMF FP-2023-08</strong>, flat tax 30% auto-déclarée. Intérêts reversés TOUS les mois.[page:3]</p>
+
+            <h2>🏗️ La 1ère Brique : 11 000€ investis, +1 100€ 2025</h2>
+            <p>Investir dès 1€ dans immo (750+ projets). <strong>12% brut/an, 19 mois moyen, 300M€ investis</strong>. JIM bots auto-investissent, 5% sur solde non investi, AMF FP-2023-15.[page:1]</p>
+
+            <div style="text-align: center; margin: 50px 0;">
+                <button class="btn" onclick="revealCodes()" style="font-size: 1.6em; padding: 25px 50px;">🔓 Mes codes exclusifs (GRATUIT)</button>
             </div>
         </div>
 
         <div class="codes-section" id="codes">
-            <h2 style="text-align: center; margin-bottom: 30px;">✅ Tes codes exclusifs</h2>
+            <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5em;">✅ Tes codes pour commencer</h2>
             
             <div class="code-card">
-                <h3>🏦 Revolut</h3>
+                <h3 style="margin-bottom: 15px;">🏦 <strong>Revolut</strong></h3>
                 <div class="code">TONCODE123</div>
-                <p><strong>80€ offerts</strong> après 3 achats. Inscris-toi maintenant !</p>
-                <button class="btn" onclick="copyCode('TONCODE123')">📋 Copier</button>
-                <a href="https://revolut.com" style="text-decoration: none;"><button class="btn">🚀 S'inscrire</button></a>
+                <p><strong>80€ offerts</strong> après 3 achats + trading gratuit. Inscris-toi !</p>
+                <button class="btn" onclick="copyCode('TONCODE123')">📋 Copier code</button>
+                <button class="btn"><a href="https://revolut.com" style="color:white;text-decoration:none;">🚀 S'inscrire</a></button>
             </div>
 
             <div class="code-card">
-                <h3>🏠 Bricks</h3>
+                <h3 style="margin-bottom: 15px;">🏠 <strong>Bricks</strong></h3>
                 <div class="code">QUEARI76</div>
-                <p><strong>2% cashback</strong> sur tes investissements immo (12 mois)</p>
-                <button class="btn" onclick="copyCode('QUEARI76')">📋 Copier</button>
-                <a href="https://app.bricks.co" style="text-decoration: none;"><button class="btn">🚀 S'inscrire</button></a>
+                <p><strong>2% cashback</strong> sur tes 1ers investissements (12 mois)</p>
+                <button class="btn" onclick="copyCode('QUEARI76')">📋 Copier code</button>
+                <button class="btn"><a href="https://app.bricks.co" style="color:white;text-decoration:none;">🚀 S'inscrire</a></button>
             </div>
 
             <div class="code-card">
-                <h3>🏗️ La 1ère Brique</h3>
+                <h3 style="margin-bottom: 15px;">🏗️ <strong>La 1ère Brique</strong></h3>
                 <div class="code">UT9ZIE</div>
-                <p><strong>3% bonus</strong> sur ton 1er projet + 10-12% rendement</p>
-                <button class="btn" onclick="copyCode('UT9ZIE')">📋 Copier</button>
-                <a href="https://lapremierebrique.fr" style="text-decoration: none;"><button class="btn">🚀 S'inscrire</button></a>
+                <p><strong>3% bonus 1er projet</strong> + 12% rendement/an</p>
+                <button class="btn" onclick="copyCode('UT9ZIE')">📋 Copier code</button>
+                <button class="btn"><a href="https://lapremierebrique.fr" style="color:white;text-decoration:none;">🚀 S'inscrire</a></button>
             </div>
         </div>
     </div>
 
     <script>
-        // Graphique gains
-        const ctx = document.getElementById('gainsChart').getContext('2d');
+        // Graphique Patrimoine
+        const ctx = document.getElementById('patrimoineChart').getContext('2d');
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin'],
+                labels: ['Début 2024', 'Mars', 'Juin', 'Sept', 'Déc 2024', 'Déc 2025'],
                 datasets: [{
-                    label: 'Mes gains cumulés (€)',
-                    data: [0, 180, 450, 720, 950, 1200],
+                    label: 'Mon patrimoine (€)',
+                    data: [25000, 45000, 72000, 95000, 105000, 120000],
                     borderColor: '#667eea',
                     backgroundColor: 'rgba(102, 126, 234, 0.2)',
                     tension: 0.4,
@@ -110,7 +120,7 @@
 
         function copyCode(code) {
             navigator.clipboard.writeText(code).then(() => {
-                alert('✅ Code copié ! Utilise-le lors de l\'inscription');
+                alert('✅ Code copié ! Colle-le lors de l\'inscription');
             });
         }
     </script>
